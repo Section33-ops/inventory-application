@@ -1,0 +1,11 @@
+* {
+  font-family: 'Courier New', Courier, monospace;
+}
+
+table,
+td,
+th {
+  border: 2px solid black;
+  border-collapse: collapse;
+  padding: 10px;
+}
