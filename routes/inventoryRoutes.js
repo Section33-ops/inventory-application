@@ -1,10 +1,11 @@
 import { Router } from 'express';
+import * as inventoryController from '../controllers/inventoryController.js';
 
 const inventoryRouter = Router();
 
-inventoryRouter.get('/games', getAllGames);
-inventoryRouter.get('/genres', getAllGenres);
-inventoryRouter.get('/consoles', getAllConsoles);
-inventoryRouter.post('/games/create', createGame);
+inventoryRouter.get('/games', inventoryController.getAllGames);
+inventoryRouter.get('/genres', inventoryController.getAllGenres);
+inventoryRouter.get('/consoles', inventoryController.getAllConsoles);
+inventoryRouter.post('/games/create', inventoryController.createGame);
 
 export default inventoryRouter;
