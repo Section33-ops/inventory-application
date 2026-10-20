@@ -7,6 +7,8 @@ configDotenv();
 const app = e();
 const port = process.env.PORT;
 
+app.set('view engine', 'ejs');
+
 app.use('/', inventoryRouter);
 
 app.listen(port, (error) => {
