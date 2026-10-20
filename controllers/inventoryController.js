@@ -3,11 +3,17 @@ export const getAllGames = (req, res) => {
 };
 
 export const getAllGenres = (req, res) => {
-  res.send('Get all genres');
+  const data = {
+    categoryName: 'Genres',
+  };
+  res.render('category-view', data);
 };
 
 export const getAllConsoles = (req, res) => {
-  res.send('Get all consoles');
+  const data = {
+    categoryName: 'Consoles',
+  };
+  res.render('category-view', data);
 };
 
 export const getHomePage = (req, res) => {
