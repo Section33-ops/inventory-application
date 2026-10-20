@@ -1,0 +1,28 @@
+{
+  "name": "inventory-application",
+  "version": "1.0.0",
+  "description": "An inventory app for a store with crud operations",
+  "homepage": "https://github.com/Section33-ops/inventory-application#readme",
+  "bugs": {
+    "url": "https://github.com/Section33-ops/inventory-application/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Section33-ops/inventory-application.git"
+  },
+  "license": "ISC",
+  "author": "Section33-ops",
+  "type": "module",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "dependencies": {
+    "dotenv": "^18.0.8",
+    "express": "^5.3.0",
+    "pg": "^8.23.1"
+  },
+  "devDependencies": {
+    "nodemon": "^1.14.10"
+  }
+}
