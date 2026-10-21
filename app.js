@@ -10,6 +10,7 @@ const port = process.env.PORT;
 app.set('view engine', 'ejs');
 
 app.use(e.static('public'));
+app.use(e.urlencoded({ extended: true }));
 app.use('/', inventoryRouter);
 
 app.listen(port, (error) => {

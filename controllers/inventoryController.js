@@ -24,5 +24,13 @@ export const getHomePage = (req, res) => {
 };
 
 export const createGame = (req, res) => {
-  res.send('Create game');
+  const { gameTitle, gameGenre, gameReleaseYear, gameConsole } = req.body;
+  res.redirect('/');
+};
+
+export const getCreateGame = (req, res) => {
+  const data = {
+    title: 'Add Game',
+  };
+  res.render('createGameForm', data);
 };
