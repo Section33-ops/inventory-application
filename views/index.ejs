@@ -12,12 +12,26 @@
     <table>
       <thead>
         <tr>
+          <th>Id</th>
           <th>Title</th>
           <th>Genre</th>
           <th>Release Year</th>
           <th>Console</th>
+          <th>Action</th>
         </tr>
       </thead>
+      <tbody>
+        <% games.forEach(game => {%>
+          <tr>
+            <td><%= game.id %></td>
+            <td><%= game.title %></td>
+            <td><%= game.genre %></td>
+            <td><%= game.releaseYear %></td>
+            <td><%= game.console %></td>
+            <td><a href="/game:<%= game.id %>/update">Update</a></td>
+          </tr>
+        <% });  %>
+      </tbody>
     </table>
     <a href="/games/create">Add Game</a>
   </body>
