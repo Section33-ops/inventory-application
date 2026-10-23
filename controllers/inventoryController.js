@@ -1,5 +1,9 @@
-export const getAllGames = (req, res) => {
-  res.send('Get all games');
+import * as query from '../db/queries.js';
+
+export const getAllGames = async (req, res) => {
+  const games = await query.getAllGames();
+  console.log(games);
+  res.json(games);
 };
 
 export const getAllGenres = (req, res) => {
@@ -16,7 +20,8 @@ export const getAllConsoles = (req, res) => {
   res.render('category-view', data);
 };
 
-export const getHomePage = (req, res) => {
+export const getHomePage = async (req, res) => {
+  const games = await query.getAllGames();
   const data = {
     title: 'Inventory',
     games: games,
@@ -26,15 +31,9 @@ export const getHomePage = (req, res) => {
 
 const games = [];
 let id = 0;
-export const createGame = (req, res) => {
+export const createGame = async (req, res) => {
   const { gameTitle, gameGenre, gameReleaseYear, gameConsole } = req.body;
-  games.push({
-    id: id++,
-    title: gameTitle,
-    genre: gameGenre,
-    releaseYear: gameReleaseYear,
-    console: gameConsole,
-  });
+  await query.insertGame(gameTitle, gameGenre, gameReleaseYear, gameConsole);
   res.redirect('/');
 };
 
