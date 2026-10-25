@@ -52,3 +52,15 @@ export const getUpdateGame = async (req, res) => {
   };
   res.render('updateGameForm', data);
 };
+
+export const postGameUpdate = async (req, res) => {
+  const { gameTitle, gameGenre, gameReleaseYear, gameConsole } = req.body;
+  await query.updateGame(
+    req.params.id,
+    gameTitle,
+    gameGenre,
+    gameReleaseYear,
+    gameConsole,
+  );
+  res.redirect('/');
+};

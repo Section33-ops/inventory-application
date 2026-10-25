@@ -10,5 +10,6 @@ inventoryRouter.get('/consoles', inventoryController.getAllConsoles);
 inventoryRouter.get('/games/create', inventoryController.getCreateGame);
 inventoryRouter.get('/game/:id/update', inventoryController.getUpdateGame);
 inventoryRouter.post('/games/create', inventoryController.createGame);
+inventoryRouter.post('/game/:id/update', inventoryController.postGameUpdate);
 
 export default inventoryRouter;
