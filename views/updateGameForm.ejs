@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title><%= title %></title>
+  </head>
+  <body>
+    <form action="/game/<%= game.id %>/update" method="post">
+      <label for="gameTitle">Title</label>
+      <input
+        type="text"
+        name="gameTitle"
+        id="gameTitle"
+        value="<%= game.title %>"
+        required
+      />
+      <label for="gameGenre">Genre</label>
+      <input
+        type="text"
+        name="gameGenre"
+        id="gameGenre"
+        value="<%= game.genre %>"
+      />
+      <label for="gameReleaseYear">Release Year</label>
+      <input
+        type="text"
+        name="gameReleaseYear"
+        id="gameReleaseYear"
+        value="<%= game.release_year %>"
+      />
+      <label for="gameConsole">Console</label>
+      <input
+        type="text"
+        name="gameConsole"
+        id="gameConsole"
+        value="<%= game.console %>"
+        required
+      />
+      <button type="submit">Update Game</button>
+    </form>
+  </body>
+</html>

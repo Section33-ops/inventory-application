@@ -42,6 +42,13 @@ export const getCreateGame = (req, res) => {
   res.render('createGameForm', data);
 };
 
-export const getUpdateGame = (req, res) => {
-  console.log(req.params.id);
+export const getUpdateGame = async (req, res) => {
+  const games = await query.getAllGames();
+  const game = await games.find((game) => game.id === Number(req.params.id));
+
+  const data = {
+    title: game.title,
+    game: game,
+  };
+  res.render('updateGameForm', data);
 };
