@@ -64,3 +64,8 @@ export const postGameUpdate = async (req, res) => {
   );
   res.redirect('/');
 };
+
+export const postGameDelete = async (req, res) => {
+  await query.deleteGame(req.params.id);
+  res.redirect('/');
+};

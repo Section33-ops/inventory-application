@@ -18,3 +18,7 @@ export async function updateGame(gameId, title, genre, releaseYear, console) {
     [gameId, title, genre, releaseYear, console],
   );
 }
+
+export async function deleteGame(gameId) {
+  await pool.query('DELETE FROM games WHERE id = $1', [gameId]);
+}

@@ -11,5 +11,6 @@ inventoryRouter.get('/games/create', inventoryController.getCreateGame);
 inventoryRouter.get('/game/:id/update', inventoryController.getUpdateGame);
 inventoryRouter.post('/games/create', inventoryController.createGame);
 inventoryRouter.post('/game/:id/update', inventoryController.postGameUpdate);
+inventoryRouter.post('/game/:id/delete', inventoryController.postGameDelete);
 
 export default inventoryRouter;
