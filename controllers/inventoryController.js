@@ -29,8 +29,6 @@ export const getHomePage = async (req, res) => {
   res.render('index', data);
 };
 
-const games = [];
-let id = 0;
 export const createGame = async (req, res) => {
   const { gameTitle, gameGenre, gameReleaseYear, gameConsole } = req.body;
   await query.insertGame(gameTitle, gameGenre, gameReleaseYear, gameConsole);
