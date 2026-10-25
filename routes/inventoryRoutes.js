@@ -8,6 +8,7 @@ inventoryRouter.get('/games', inventoryController.getAllGames);
 inventoryRouter.get('/genres', inventoryController.getAllGenres);
 inventoryRouter.get('/consoles', inventoryController.getAllConsoles);
 inventoryRouter.get('/games/create', inventoryController.getCreateGame);
+inventoryRouter.get('/game:id/update', inventoryController.getUpdateGame);
 inventoryRouter.post('/games/create', inventoryController.createGame);
 
 export default inventoryRouter;

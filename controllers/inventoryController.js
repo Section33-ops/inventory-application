@@ -41,3 +41,7 @@ export const getCreateGame = (req, res) => {
   };
   res.render('createGameForm', data);
 };
+
+export const getUpdateGame = (req, res) => {
+  console.log(req.params.id);
+};
