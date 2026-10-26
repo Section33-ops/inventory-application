@@ -16,12 +16,20 @@
         required
       />
       <label for="gameGenre">Genre</label>
-      <input
-        type="text"
-        name="gameGenre"
-        id="gameGenre"
-        value="<%= game.genre %>"
-      />
+      <select name="gameGenre" id="gameGenre">
+        <option value="Platformer" <%= game.genre === 'Platformer' ? 'selected' : '' %>>Platformer</option>
+        <option value="Shoot 'Em Ups" <%= game.genre === "Shoot 'Em Ups" ? 'selected' : '' %>>Shoot 'Em Ups (Shmups)</option>
+        <option value="RPG" <%= game.genre === 'RPG' ? 'selected' : '' %>>RPG</option>
+        <option value="Beat 'Em Ups" <%= game.genre === "Beat 'Em Ups" ? 'selected' : '' %>>Beat 'Em Ups</option>
+        <option value="Action-Adventure" <%= game.genre === 'Action-Adventure' ? 'selected' : '' %>>Action-Adventure</option>
+        <option value="Arcade/Maze" <%= game.genre === 'Arcade/Maze' ? 'selected' : '' %>>Arcade/Maze</option>
+        <option value="Fighting" <%= game.genre === 'Fighting' ? 'selected' : '' %>>Fighting</option>
+        <option value="Run and Gun" <%= game.genre === 'Run and Gun' ? 'selected' : '' %>>Run and Gun</option>
+        <option value="Sports" <%= game.genre === 'Sports' ? 'selected' : '' %>>Sports</option>
+        <option value="Racing" <%= game.genre === 'Racing' ? 'selected' : '' %>>Racing</option>
+        <option value="Simulation" <%= game.genre === 'Simulation' ? 'selected' : '' %>>Simulation</option>
+        <option value="Strategy" <%= game.genre === 'Strategy' ? 'selected' : '' %>>Strategy</option>
+      </select>
       <label for="gameReleaseYear">Release Year</label>
       <input
         type="number"
@@ -30,13 +38,33 @@
         value="<%= game.release_year %>"
       />
       <label for="gameConsole">Console</label>
-      <input
-        type="text"
-        name="gameConsole"
-        id="gameConsole"
-        value="<%= game.console %>"
-        required
-      />
+      <select name="gameConsole" id="gameConsole">
+        <option value="Atari 2600" <%= game.console === 'Atari 2600' ? 'selected' : '' %>>Atari 2600</option>
+        <option value="Nintendo Entertainment System (NES)" <%= game.console === 'Nintendo Entertainment System (NES)' ? 'selected' : '' %>>
+          Nintendo Entertainment System (NES)
+        </option>
+        <option value="Sega Master System" <%= game.console === 'Sega Master System' ? 'selected' : '' %>>Sega Master System</option>
+        <option value="Nintendo Game Boy" <%= game.console === 'Nintendo Game Boy' ? 'selected' : '' %>>Nintendo Game Boy</option>
+        <option value="Super Nintendo (SNES)" <%= game.console === 'Super Nintendo (SNES)' ? 'selected' : '' %>>Super Nintendo (SNES)</option>
+        <option value="Sega Genesis" <%= game.console === 'Sega Genesis' ? 'selected' : '' %>>Sega Genesis</option>
+        <option value="Sega Game Gear" <%= game.console === 'Sega Game Gear' ? 'selected' : '' %>>Sega Game Gear</option>
+        <option value="Sony PlayStation 1" <%= game.console === 'Sony PlayStation 1' ? 'selected' : '' %>>Sony PlayStation 1</option>
+        <option value="Nintendo 64" <%= game.console === 'Nintendo 64' ? 'selected' : '' %>>Nintendo 64</option>
+        <option value="Sega Saturn" <%= game.console === 'Sega Saturn' ? 'selected' : '' %>>Sega Saturn</option>
+        <option value="Game Boy Color" <%= game.console === 'Game Boy Color' ? 'selected' : '' %>>Game Boy Color</option>
+        <option value="Sony PlayStation 2" <%= game.console === 'Sony PlayStation 2' ? 'selected' : '' %>>Sony PlayStation 2</option>
+        <option value="Nintendo GameCube" <%= game.console === 'Nintendo GameCube' ? 'selected' : '' %>>Nintendo GameCube</option>
+        <option value="Original Xbox" <%= game.console === 'Original Xbox' ? 'selected' : '' %>>Original Xbox</option>
+        <option value="Sega Dreamcast" <%= game.console === 'Sega Dreamcast' ? 'selected' : '' %>>Sega Dreamcast</option>
+        <option value="Game Boy Advance" <%= game.console === 'Game Boy Advance' ? 'selected' : '' %>>Game Boy Advance</option>
+        <option value="Xbox 360" <%= game.console === 'Xbox 360' ? 'selected' : '' %>>Xbox 360</option>
+        <option value="Sony PlayStation 3" <%= game.console === 'Sony PlayStation 3' ? 'selected' : '' %>>Sony PlayStation 3</option>
+        <option value="Nintendo Wii" <%= game.console === 'Nintendo Wii' ? 'selected' : '' %>>Nintendo Wii</option>
+        <option value="Nintendo DS" <%= game.console === 'Nintendo DS' ? 'selected' : '' %>>Nintendo DS</option>
+        <option value="PlayStation Portable (PSP)" <%= game.console === 'PlayStation Portable (PSP)' ? 'selected' : '' %>>
+          PlayStation Portable (PSP)
+        </option>
+      </select>
       <button type="submit">Update Game</button>
     </form>
   </body>

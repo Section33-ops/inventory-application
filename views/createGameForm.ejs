@@ -10,11 +10,51 @@
       <label for="gameTitle">Title</label>
       <input type="text" name="gameTitle" id="gameTitle" required />
       <label for="gameGenre">Genre</label>
-      <input type="text" name="gameGenre" id="gameGenre" />
+      <select name="gameGenre" id="gameGenre">
+        <option value="">Select Genre</option>
+        <option value="Platformer">Platformer</option>
+        <option value="Shoot 'Em Ups">Shoot 'Em Ups (Shmups)</option>
+        <option value="RPG">RPG</option>
+        <option value="Beat 'Em Ups">Beat 'Em Ups</option>
+        <option value="Action-Adventure">Action-Adventure</option>
+        <option value="Arcade/Maze">Arcade/Maze</option>
+        <option value="Fighting">Fighting</option>
+        <option value="Run and Gun">Run and Gun</option>
+        <option value="Sports">Sports</option>
+        <option value="Racing">Racing</option>
+        <option value="Simulation">Simulation</option>
+        <option value="Strategy">Strategy</option>
+      </select>
       <label for="gameReleaseYear">Release Year</label>
       <input type="number" name="gameReleaseYear" id="gameReleaseYear" />
       <label for="gameConsole">Console</label>
-      <input type="text" name="gameConsole" id="gameConsole" required />
+      <select name="gameConsole" id="gameConsole">
+        <option value="Atari 2600">Atari 2600</option>
+        <option value="Nintendo Entertainment System (NES)">
+          Nintendo Entertainment System (NES)
+        </option>
+        <option value="Sega Master System">Sega Master System</option>
+        <option value="Nintendo Game Boy">Nintendo Game Boy</option>
+        <option value="Super Nintendo (SNES)">Super Nintendo (SNES)</option>
+        <option value="Sega Genesis">Sega Genesis</option>
+        <option value="Sega Game Gear">Sega Game Gear</option>
+        <option value="Sony PlayStation 1">Sony PlayStation 1</option>
+        <option value="Nintendo 64">Nintendo 64</option>
+        <option value="Sega Saturn">Sega Saturn</option>
+        <option value="Game Boy Color">Game Boy Color</option>
+        <option value="Sony PlayStation 2">Sony PlayStation 2</option>
+        <option value="Nintendo GameCube">Nintendo GameCube</option>
+        <option value="Original Xbox">Original Xbox</option>
+        <option value="Sega Dreamcast">Sega Dreamcast</option>
+        <option value="Game Boy Advance">Game Boy Advance</option>
+        <option value="Xbox 360">Xbox 360</option>
+        <option value="Sony PlayStation 3">Sony PlayStation 3</option>
+        <option value="Nintendo Wii">Nintendo Wii</option>
+        <option value="Nintendo DS">Nintendo DS</option>
+        <option value="PlayStation Portable (PSP)">
+          PlayStation Portable (PSP)
+        </option>
+      </select>
       <button type="submit">Add Game</button>
     </form>
     <a href="/">Back Home</a>
