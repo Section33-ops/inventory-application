@@ -43,8 +43,7 @@ export const getCreateGame = (req, res) => {
 };
 
 export const getUpdateGame = async (req, res) => {
-  const games = await query.getAllGames();
-  const game = await games.find((game) => game.id === Number(req.params.id));
+  const game = await query.getGameById(req.params.id);
 
   const data = {
     title: game.title,

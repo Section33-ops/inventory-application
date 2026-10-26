@@ -5,6 +5,13 @@ export async function getAllGames() {
   return rows;
 }
 
+export async function getGameById(gameId) {
+  const { rows } = await pool.query('SELECT * FROM games WHERE id = $1', [
+    gameId,
+  ]);
+  return rows[0];
+}
+
 export async function insertGame(title, genre, releaseYear, console) {
   await pool.query(
     'INSERT INTO games (title, genre, release_year, console) VALUES($1, $2, $3, $4)',
