@@ -13,7 +13,7 @@ CREATE TABLE IF NOT EXISTS games (
 );
 
 INSERT INTO games (title, genre, release_year, console)
-VALUES ('Super Mario Bros', 'platformer', 1985, 'NES')
+VALUES ('Super Mario Bros', 'Platformer', 1985, 'Nintendo Entertainment System (NES)')
 `;
 
 async function main() {
