@@ -20,9 +20,9 @@ CREATE TABLE IF NOT EXISTS genres (
 CREATE TABLE IF NOT EXISTS games (
   id INTEGER PRIMARY KEY GENERATED ALWAYS AS IDENTITY,
   title VARCHAR ( 255 ),
-  genre VARCHAR ( 255 ),
+  genre_id INT REFERENCES genres(id) ON DELETE CASCADE,
   release_year SMALLINT,
-  console VARCHAR ( 255 )
+  console_id INT REFERENCES consoles(id) ON DELETE CASCADE
 );
 
 INSERT INTO consoles (name) 
