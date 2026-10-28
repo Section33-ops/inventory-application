@@ -20,9 +20,9 @@ CREATE TABLE IF NOT EXISTS genres (
 CREATE TABLE IF NOT EXISTS games (
   id INTEGER PRIMARY KEY GENERATED ALWAYS AS IDENTITY,
   title VARCHAR ( 255 ),
-  genre_id INT REFERENCES genres(id) ON DELETE CASCADE,
+  genre VARCHAR ( 255 ),
   release_year SMALLINT,
-  console_id INT REFERENCES consoles(id) ON DELETE CASCADE
+  console VARCHAR ( 255 )
 );
 
 INSERT INTO consoles (name) 
@@ -49,6 +49,7 @@ VALUES
  ('Nintendo DS'),
  ('PlayStation Portable (PSP)');
 
+INSERT INTO genres (name) 
 VALUES 
   ('Platformer'),
   ('Shoot ''Em Ups'),
