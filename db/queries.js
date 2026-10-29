@@ -1,7 +1,12 @@
 import { pool } from './pool.js';
 
 export async function getAllGames() {
-  const { rows } = await pool.query('SELECT * FROM games');
+  const SQL = `
+    SELECT games.title, games.release_year, genres.genre_name, consoles.console_name
+    FROM games
+    INNER JOIN genres ON games.genre_id = genres.id
+    INNER JOIN consoles ON games.console_id = consoles.id;`;
+  const { rows } = await pool.query(SQL);
   return rows;
 }
 

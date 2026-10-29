@@ -27,9 +27,9 @@
             <% rowNum++ %>
             <td><%= rowNum %></td>
             <td><%= game.title %></td>
-            <td><%= game.genre %></td>
+            <td><%= game.genre_name %></td>
             <td><%= game.release_year %></td>
-            <td><%= game.console %></td>
+            <td><%= game.console_name %></td>
             <td><a href="/game/<%= game.id %>/update">Update</a> <form action="/game/<%= game.id %>/delete" method="post" style="display: inline;"><button type="submit">Delete</button></form></td>
           </tr>
         <% });  %>
