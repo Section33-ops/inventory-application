@@ -17,10 +17,10 @@ export async function getGameById(gameId) {
   return rows[0];
 }
 
-export async function insertGame(title, genre, releaseYear, console) {
+export async function insertGame(title, genre_id, releaseYear, console_id) {
   await pool.query(
-    'INSERT INTO games (title, genre, release_year, console) VALUES($1, $2, $3, $4)',
-    [title, genre, releaseYear, console],
+    'INSERT INTO games (title, genre_id, release_year, console_id) VALUES($1, $2, $3, $4)',
+    [title, genre_id, releaseYear, console_id],
   );
 }
 

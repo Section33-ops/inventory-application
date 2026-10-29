@@ -31,7 +31,15 @@ export const getHomePage = async (req, res) => {
 
 export const createGame = async (req, res) => {
   const { gameTitle, gameGenre, gameReleaseYear, gameConsole } = req.body;
-  await query.insertGame(gameTitle, gameGenre, gameReleaseYear, gameConsole);
+  const gameGenreNum = Number(gameGenre);
+  const gameconsoleNum = Number(gameConsole);
+
+  await query.insertGame(
+    gameTitle,
+    gameGenreNum,
+    gameReleaseYear,
+    gameconsoleNum,
+  );
   res.redirect('/');
 };
 
