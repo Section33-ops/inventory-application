@@ -4,8 +4,28 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title><%= categoryName %></title>
+    <link rel="stylesheet" href="/css/style.css" />
   </head>
   <body>
     <h1><%= categoryName %></h1>
+
+    <table>
+      <thead>
+        <tr>
+          <th>Id</th>
+          <th><%= categoryName %></th>
+        </tr>
+      </thead>
+      <tbody>
+        <% let rowNum = 0;%>
+        <% category.forEach(item => {%>
+          <tr>
+            <% rowNum++ %>
+            <td><%= rowNum %></td>
+            <td><%= item[titleColumnName] %></td>
+          </tr>
+        <% });  %>
+      </tbody>
+    </table>
   </body>
 </html>

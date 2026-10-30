@@ -6,16 +6,22 @@ export const getAllGames = async (req, res) => {
   res.json(games);
 };
 
-export const getAllGenres = (req, res) => {
+export const getAllGenres = async (req, res) => {
+  const genres = await query.getAllGenres();
   const data = {
     categoryName: 'Genres',
+    category: genres,
+    titleColumnName: 'genre_name',
   };
   res.render('category-view', data);
 };
 
-export const getAllConsoles = (req, res) => {
+export const getAllConsoles = async (req, res) => {
+  const consoles = await query.getAllConsoles();
   const data = {
     categoryName: 'Consoles',
+    category: consoles,
+    titleColumnName: 'console_name',
   };
   res.render('category-view', data);
 };
