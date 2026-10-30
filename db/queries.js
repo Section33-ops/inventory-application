@@ -2,7 +2,7 @@ import { pool } from './pool.js';
 
 export async function getAllGames() {
   const SQL = `
-    SELECT games.title, games.release_year, genres.genre_name, consoles.console_name
+    SELECT games.id, games.title, games.release_year, genres.genre_name, consoles.console_name
     FROM games
     INNER JOIN genres ON games.genre_id = genres.id
     INNER JOIN consoles ON games.console_id = consoles.id;`;
@@ -26,7 +26,7 @@ export async function insertGame(title, genre_id, releaseYear, console_id) {
 
 export async function updateGame(gameId, title, genre, releaseYear, console) {
   await pool.query(
-    'UPDATE games SET title = $2, genre = $3, release_year = $4, console = $5 WHERE id = $1',
+    'UPDATE games SET title = $2, genre_id = $3, release_year = $4, console_id = $5 WHERE id = $1',
     [gameId, title, genre, releaseYear, console],
   );
 }

@@ -17,18 +17,18 @@
       />
       <label for="gameGenre">Genre</label>
       <select name="gameGenre" id="gameGenre">
-        <option value="Platformer" <%= game.genre === 'Platformer' ? 'selected' : '' %>>Platformer</option>
-        <option value="Shoot 'Em Ups" <%= game.genre === "Shoot 'Em Ups" ? 'selected' : '' %>>Shoot 'Em Ups (Shmups)</option>
-        <option value="RPG" <%= game.genre === 'RPG' ? 'selected' : '' %>>RPG</option>
-        <option value="Beat 'Em Ups" <%= game.genre === "Beat 'Em Ups" ? 'selected' : '' %>>Beat 'Em Ups</option>
-        <option value="Action-Adventure" <%= game.genre === 'Action-Adventure' ? 'selected' : '' %>>Action-Adventure</option>
-        <option value="Arcade/Maze" <%= game.genre === 'Arcade/Maze' ? 'selected' : '' %>>Arcade/Maze</option>
-        <option value="Fighting" <%= game.genre === 'Fighting' ? 'selected' : '' %>>Fighting</option>
-        <option value="Run and Gun" <%= game.genre === 'Run and Gun' ? 'selected' : '' %>>Run and Gun</option>
-        <option value="Sports" <%= game.genre === 'Sports' ? 'selected' : '' %>>Sports</option>
-        <option value="Racing" <%= game.genre === 'Racing' ? 'selected' : '' %>>Racing</option>
-        <option value="Simulation" <%= game.genre === 'Simulation' ? 'selected' : '' %>>Simulation</option>
-        <option value="Strategy" <%= game.genre === 'Strategy' ? 'selected' : '' %>>Strategy</option>
+        <option value="1" <%= game.genre_id === 1 ? 'selected' : '' %>>Platformer</option>
+        <option value="2" <%= game.genre_id === 2 ? 'selected' : '' %>>Shoot 'Em Ups (Shmups)</option>
+        <option value="3" <%= game.genre_id === 3 ? 'selected' : '' %>>RPG</option>
+        <option value="4" <%= game.genre_id === 4 ? 'selected' : '' %>>Beat 'Em Ups</option>
+        <option value="5" <%= game.genre_id === 5 ? 'selected' : '' %>>Action-Adventure</option>
+        <option value="6" <%= game.genre_id === 6 ? 'selected' : '' %>>Arcade/Maze</option>
+        <option value="7" <%= game.genre_id === 7 ? 'selected' : '' %>>Fighting</option>
+        <option value="8" <%= game.genre_id === 8 ? 'selected' : '' %>>Run and Gun</option>
+        <option value="9" <%= game.genre_id === 9 ? 'selected' : '' %>>Sports</option>
+        <option value="10" <%= game.genre_id === 10 ? 'selected' : '' %>>Racing</option>
+        <option value="11" <%= game.genre_id === 11 ? 'selected' : '' %>>Simulation</option>
+        <option value="12" <%= game.genre_id === 12 ? 'selected' : '' %>>Strategy</option>
       </select>
       <label for="gameReleaseYear">Release Year</label>
       <input
@@ -39,29 +39,29 @@
       />
       <label for="gameConsole">Console</label>
       <select name="gameConsole" id="gameConsole">
-        <option value="Atari 2600" <%= game.console === 'Atari 2600' ? 'selected' : '' %>>Atari 2600</option>
-        <option value="Nintendo Entertainment System (NES)" <%= game.console === 'Nintendo Entertainment System (NES)' ? 'selected' : '' %>>
+        <option value="1" <%= game.console_id === 1 ? 'selected' : '' %>>Atari 2600</option>
+        <option value="2" <%= game.console_id === 2 ? 'selected' : '' %>>
           Nintendo Entertainment System (NES)
         </option>
-        <option value="Sega Master System" <%= game.console === 'Sega Master System' ? 'selected' : '' %>>Sega Master System</option>
-        <option value="Nintendo Game Boy" <%= game.console === 'Nintendo Game Boy' ? 'selected' : '' %>>Nintendo Game Boy</option>
-        <option value="Super Nintendo (SNES)" <%= game.console === 'Super Nintendo (SNES)' ? 'selected' : '' %>>Super Nintendo (SNES)</option>
-        <option value="Sega Genesis" <%= game.console === 'Sega Genesis' ? 'selected' : '' %>>Sega Genesis</option>
-        <option value="Sega Game Gear" <%= game.console === 'Sega Game Gear' ? 'selected' : '' %>>Sega Game Gear</option>
-        <option value="Sony PlayStation 1" <%= game.console === 'Sony PlayStation 1' ? 'selected' : '' %>>Sony PlayStation 1</option>
-        <option value="Nintendo 64" <%= game.console === 'Nintendo 64' ? 'selected' : '' %>>Nintendo 64</option>
-        <option value="Sega Saturn" <%= game.console === 'Sega Saturn' ? 'selected' : '' %>>Sega Saturn</option>
-        <option value="Game Boy Color" <%= game.console === 'Game Boy Color' ? 'selected' : '' %>>Game Boy Color</option>
-        <option value="Sony PlayStation 2" <%= game.console === 'Sony PlayStation 2' ? 'selected' : '' %>>Sony PlayStation 2</option>
-        <option value="Nintendo GameCube" <%= game.console === 'Nintendo GameCube' ? 'selected' : '' %>>Nintendo GameCube</option>
-        <option value="Original Xbox" <%= game.console === 'Original Xbox' ? 'selected' : '' %>>Original Xbox</option>
-        <option value="Sega Dreamcast" <%= game.console === 'Sega Dreamcast' ? 'selected' : '' %>>Sega Dreamcast</option>
-        <option value="Game Boy Advance" <%= game.console === 'Game Boy Advance' ? 'selected' : '' %>>Game Boy Advance</option>
-        <option value="Xbox 360" <%= game.console === 'Xbox 360' ? 'selected' : '' %>>Xbox 360</option>
-        <option value="Sony PlayStation 3" <%= game.console === 'Sony PlayStation 3' ? 'selected' : '' %>>Sony PlayStation 3</option>
-        <option value="Nintendo Wii" <%= game.console === 'Nintendo Wii' ? 'selected' : '' %>>Nintendo Wii</option>
-        <option value="Nintendo DS" <%= game.console === 'Nintendo DS' ? 'selected' : '' %>>Nintendo DS</option>
-        <option value="PlayStation Portable (PSP)" <%= game.console === 'PlayStation Portable (PSP)' ? 'selected' : '' %>>
+        <option value="3" <%= game.console_id === 3 ? 'selected' : '' %>>Sega Master System</option>
+        <option value="4" <%= game.console_id === 4 ? 'selected' : '' %>>Nintendo Game Boy</option>
+        <option value="5" <%= game.console_id === 5 ? 'selected' : '' %>>Super Nintendo (SNES)</option>
+        <option value="6" <%= game.console_id === 6 ? 'selected' : '' %>>Sega Genesis</option>
+        <option value="7" <%= game.console_id === 7 ? 'selected' : '' %>>Sega Game Gear</option>
+        <option value="8" <%= game.console_id === 8 ? 'selected' : '' %>>Sony PlayStation 1</option>
+        <option value="9" <%= game.console_id === 9 ? 'selected' : '' %>>Nintendo 64</option>
+        <option value="10" <%= game.console_id === 10 ? 'selected' : '' %>>Sega Saturn</option>
+        <option value="11" <%= game.console_id === 11 ? 'selected' : '' %>>Game Boy Color</option>
+        <option value="12" <%= game.console_id === 12 ? 'selected' : '' %>>Sony PlayStation 2</option>
+        <option value="13" <%= game.console_id === 13 ? 'selected' : '' %>>Nintendo GameCube</option>
+        <option value="14" <%= game.console_id === 14 ? 'selected' : '' %>>Original Xbox</option>
+        <option value="15" <%= game.console_id === 15 ? 'selected' : '' %>>Sega Dreamcast</option>
+        <option value="16" <%= game.console_id === 16 ? 'selected' : '' %>>Game Boy Advance</option>
+        <option value="17" <%= game.console_id === 17 ? 'selected' : '' %>>Xbox 360</option>
+        <option value="18" <%= game.console_id === 18 ? 'selected' : '' %>>Sony PlayStation 3</option>
+        <option value="19" <%= game.console_id === 19 ? 'selected' : '' %>>Nintendo Wii</option>
+        <option value="20" <%= game.console_id === 20 ? 'selected' : '' %>>Nintendo DS</option>
+        <option value="21" <%= game.console_id === 21 ? 'selected' : '' %>>
           PlayStation Portable (PSP)
         </option>
       </select>
