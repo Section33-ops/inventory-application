@@ -30,7 +30,7 @@
             <td><%= game.genre_name %></td>
             <td><%= game.release_year %></td>
             <td><%= game.console_name %></td>
-            <td><a href="/game/<%= game.id %>/update">Update</a> <form action="/game/<%= game.id %>/delete" method="post" style="display: inline;"><button type="submit">Delete</button></form></td>
+            <td><a href="/game/update/<%= game.id %>">Update</a> <form action="/game/delete/<%= game.id %>" method="post" style="display: inline;"><button type="submit">Delete</button></form></td>
           </tr>
         <% });  %>
       </tbody>
