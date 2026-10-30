@@ -34,3 +34,19 @@ export async function updateGame(gameId, title, genre, releaseYear, console) {
 export async function deleteGame(gameId) {
   await pool.query('DELETE FROM games WHERE id = $1', [gameId]);
 }
+
+export async function getAllGenres() {
+  const SQL = `
+  SELECT * FROM genres`;
+
+  const { rows } = await pool.query(SQL);
+  return rows;
+}
+
+export async function getAllConsoles() {
+  const SQL = `
+  SELECT * FROM consoles`;
+
+  const { rows } = await pool.query(SQL);
+  return rows;
+}
