@@ -10,7 +10,7 @@ inventoryRouter.get('/consoles', inventoryController.getAllConsoles);
 inventoryRouter.get('/games/create', inventoryController.getCreateGame);
 inventoryRouter.get('/game/update/:id', inventoryController.getUpdateGame);
 inventoryRouter.post('/games/create', inventoryController.createGame);
-inventoryRouter.post('/game/update/:id', inventoryController.postGameUpdate);
-inventoryRouter.post('/game/delete/:id', inventoryController.postGameDelete);
+inventoryRouter.put('/game/update/:id', inventoryController.updateGame);
+inventoryRouter.delete('/game/delete/:id', inventoryController.deleteGame);
 
 export default inventoryRouter;

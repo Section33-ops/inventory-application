@@ -76,7 +76,7 @@ export const getUpdateGame = asyncHandler(async (req, res, next) => {
   res.render('updateGameForm', data);
 });
 
-export const postGameUpdate = asyncHandler(async (req, res, next) => {
+export const updateGame = asyncHandler(async (req, res, next) => {
   const { gameTitle, gameGenre, gameReleaseYear, gameConsole } = req.body;
 
   const gameGenreNum = Number(gameGenre);
@@ -97,7 +97,7 @@ export const postGameUpdate = asyncHandler(async (req, res, next) => {
   res.redirect('/');
 });
 
-export const postGameDelete = asyncHandler(async (req, res, next) => {
+export const deleteGame = asyncHandler(async (req, res, next) => {
   const deletedGame = await query.deleteGame(req.params.id);
 
   if (!deletedGame) {
