@@ -2,7 +2,7 @@ import { AppError } from '../utils/AppError';
 
 const handlePostgresError = (err) => {
   switch (err.code) {
-    case '23503':
+    case '23505':
       return new AppError('This record already exists.', 409);
     case '23503':
       return new AppError('Invalid reference: Related record not found.', 400);
