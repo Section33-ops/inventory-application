@@ -1,6 +1,7 @@
 import e from 'express';
 import inventoryRouter from './routes/inventoryRoutes.js';
 import { configDotenv } from 'dotenv';
+import { errorHandler } from './middleware/errorHandler.js';
 
 configDotenv();
 
@@ -12,6 +13,7 @@ app.set('view engine', 'ejs');
 app.use(e.static('public'));
 app.use(e.urlencoded({ extended: true }));
 app.use('/', inventoryRouter);
+app.use(errorHandler);
 
 app.listen(port, (error) => {
   if (error) {
