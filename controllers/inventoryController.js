@@ -97,7 +97,12 @@ export const postGameUpdate = asyncHandler(async (req, res, next) => {
   res.redirect('/');
 });
 
-export const postGameDelete = asyncHandler(async (req, res) => {
-  await query.deleteGame(req.params.id);
+export const postGameDelete = asyncHandler(async (req, res, next) => {
+  const deletedGame = await query.deleteGame(req.params.id);
+
+  if (!deletedGame) {
+    return next(new AppError('Game not found', 404));
+  }
+
   res.redirect('/');
 });

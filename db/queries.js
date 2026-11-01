@@ -18,21 +18,30 @@ export async function getGameById(gameId) {
 }
 
 export async function insertGame(title, genre_id, releaseYear, console_id) {
-  await pool.query(
-    'INSERT INTO games (title, genre_id, release_year, console_id) VALUES($1, $2, $3, $4)',
+  const { rows } = await pool.query(
+    'INSERT INTO games (title, genre_id, release_year, console_id) VALUES($1, $2, $3, $4) RETURNING *',
     [title, genre_id, releaseYear, console_id],
   );
+
+  return rows[0];
 }
 
 export async function updateGame(gameId, title, genre, releaseYear, console) {
-  await pool.query(
-    'UPDATE games SET title = $2, genre_id = $3, release_year = $4, console_id = $5 WHERE id = $1',
+  const { rows } = await pool.query(
+    'UPDATE games SET title = $2, genre_id = $3, release_year = $4, console_id = $5 WHERE id = $1 RETURNING *',
     [gameId, title, genre, releaseYear, console],
   );
+
+  return rows[0];
 }
 
 export async function deleteGame(gameId) {
-  await pool.query('DELETE FROM games WHERE id = $1', [gameId]);
+  const { rows } = await pool.query(
+    'DELETE FROM games WHERE id = $1 RETURNING *',
+    [gameId],
+  );
+  console.log(rows);
+  return rows[0];
 }
 
 export async function getAllGenres() {
